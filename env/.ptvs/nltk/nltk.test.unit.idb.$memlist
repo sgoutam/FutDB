@@ -1,0 +1,16 @@
+test_json2csv_corpus
+translate
+test_corpus_views
+test_2x_compat
+test_collocations
+test_naivebayes
+test_tag
+test_classify
+test_hmm
+test_tokenize
+test_twitter_auth
+utils
+test_tgrep
+test_corpora
+test_seekable_unicode_stream_reader
+test_stem

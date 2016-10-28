@@ -1,0 +1,13 @@
+datetime
+namedtuple
+CodecOptions
+UUID_REPRESENTATION_NAMES
+MutableMapping
+DEFAULT_CODEC_OPTIONS
+ALL_UUID_REPRESENTATIONS
+string_type
+_raw_document_class
+_parse_codec_options
+_RAW_BSON_DOCUMENT_MARKER
+_options_base
+PYTHON_LEGACY

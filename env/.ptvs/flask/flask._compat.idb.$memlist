@@ -1,0 +1,13 @@
+PY2
+text_type
+itervalues
+iterkeys
+reraise
+iteritems
+_identity
+integer_types
+StringIO
+implements_to_string
+string_types
+sys
+with_metaclass

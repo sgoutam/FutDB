@@ -1,0 +1,17 @@
+_unicode
+bytes_from_hex
+PY3
+thread
+MAXSIZE
+b
+StringIO
+imap
+iteritems
+reraise
+u
+codecs
+string_type
+text_type
+integer_types
+itervalues
+sys

@@ -1,0 +1,17 @@
+ConfigurationError
+validate_cert_reqs
+atexit
+ssl
+certifi
+HAVE_WINCERTSTORE
+SSLContext
+get_ssl_context
+sys
+_WINCERTS
+string_type
+_WINCERTSLOCK
+HAVE_SSL
+_load_wincerts
+threading
+CertFile
+HAVE_CERTIFI

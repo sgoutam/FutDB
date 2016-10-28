@@ -1,0 +1,10 @@
+py_make_scanner
+linecol
+NUMBER_RE
+__all__
+errmsg
+JSONDecodeError
+c_make_scanner
+make_scanner
+re
+_import_c_make_scanner

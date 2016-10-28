@@ -1,0 +1,7 @@
+InsertOneResult
+_WriteResult
+InsertManyResult
+InvalidOperation
+BulkWriteResult
+UpdateResult
+DeleteResult

@@ -1,0 +1,16 @@
+sys
+has_request_context
+RequestContext
+update_wrapper
+blueprint_is_module
+HTTPException
+AppContext
+appcontext_popped
+_app_ctx_stack
+_AppCtxGlobals
+with_statement
+appcontext_pushed
+copy_current_request_context
+has_app_context
+_request_ctx_stack
+after_this_request

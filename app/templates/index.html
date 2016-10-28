@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>FutBall DB - Simple,Minimal,Elegant</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+
+    <script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/modernizr.custom.js"></script>
+	
+
+	
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/html5shiv.js"></script>
+      <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">Minimal</a></h1>
+			<i class="icon-remove menu-close"></i>
+			<a href="#home" class="smoothScroll">Home</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#portfolio" class="smoothScroll">Portfolio</a>
+			<!--<a href="#contact" class="smoothScroll">Contact</a>-->
+			<a href="#"><i class="icon-facebook"></i></a>
+			<a href="#"><i class="icon-twitter"></i></a>
+			<a href="#"><i class="icon-dribbble"></i></a>
+			<a href="#"><i class="icon-envelope"></i></a>
+		</div>
+		
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
+
+
+	
+	<!-- ========== HEADER SECTION ========== -->
+
+	<div id="headerwrap">
+		<div class="container">
+			<div class="col-md-2 logo">
+				<img src="/static/img/logo.png">
+			</div>
+            <h1>FutBall DB<small>Simple,Minimal,Elegant</small></h1>
+			<div class="row">
+                <br>
+				<div class="row">
+				<div class="col-md-2"></div>
+				  <div class="col-md-6">
+					<form action="" method="post" name="login">
+
+                        {{ form.hidden_tag() }}
+                        <span class="col-md-2 label label-primary">Search By :</span>
+		                    <div class="row">
+
+				                    <div class="col-md-4">
+		                            {{form.searchChoice()}}
+		                            </div>
+
+		                  </div>
+
+
+
+					    <p>
+						  <br>
+					    	  {{ form.searchQuery(size=60) }}<br>
+					    </p>
+					  <div class="col-md-10"><button type="submit" class="btn btn-primary">Submit</button></div>
+				  	</form>
+				  </div>
+				<div class="col-md-4"></div>
+				</div>
+				<br>
+				<div class="col-lg-6 col-lg-offset-3">
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+	
+	
+	
+	<!-- ========== ABOUT SECTION ========== -->
+	<section id="about" name="about"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row">
+				<h3>ABOUT OUR DB</h3>
+				<p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+				
+				<!-- INTRO INFORMATIO-->
+				<div class="col-lg-6 col-lg-offset-3">
+					<p>In this website you will be able to get  all the details of your favourite football player.</p>
+					<p>In addition you can also refer the latest articles published about that player in leading websites or newspaper.
+						<br><br><br><br>	<br><br>
+
+
+
+
+
+					</p>
+				</div>								
+			</div>
+		</div><!-- /container -->
+	</div><!-- /f -->
+	
+
+	<!-- ========== CAROUSEL SECTION ========== -->
+{% block response %}
+    {% if form.validate_on_submit() %}
+
+    {% if playerbool %}
+            <<section id="portfolio" name="portfolio"></section>
+            <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+              <div class="panel panel-info">
+                <div class="panel-heading">PLAYER</div>
+               <div class="panel-body">
+
+               <h3>{{response.name}}</h3>
+               <h3>{{response.team}}</h3>
+                   </br></br>
+                </div></div>
+              </div>
+
+          <div class="col-md-7">
+            <div class="panel panel-success">
+              <div class="panel-heading">DETAILS</div>
+               <div class="panel-body">
+                           <form method="post" action="" role="form">
+
+                                    <div class="form-group">
+                                      <label for="contactname">Club</label>
+                                      <p>{{response.club}}</p>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <label for="contactemail">Position</label>
+                                      <p>{{response.position}}</p>
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <label for="contactemail">Years</label>
+                                      <p>{{response.years}}</p>
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label for="contactemail">Date Of Birth</label>
+                                      <p>{{response.DOB}}</p>
+                                    </div>
+
+                                  <!--  <div class="form-group">
+                                      <label for="contactemail">Points</label>
+                                      <p>{{response.newsresponses[0].content}}</p>
+                                    </div>-->
+
+
+                          </form>
+
+               </div>
+             </div>
+             </div>
+          </div>
+
+        <div class="row">
+
+              <div class="panel panel-primary">
+                <div class="panel-heading">NEWS</div>
+                    <ul class="list-group">
+                    {% for nresponse in response.newsresponses %}
+                        <div class="panel-body">
+                            <li>
+                            <h4>
+                            <a href="{{nresponse.unescapedurl}}">{{nresponse.title|safe}}</a>
+                            </h4>
+                            <h5>{{nresponse.content|safe}}</h5>
+                            </li>
+                        </div>
+                    {%endfor %}
+                    </ul>
+              </div>
+
+
+
+        </div>
+        <div class="row">
+
+              <div class="panel panel-primary">
+                <div class="panel-heading">Wikipedia Summary</div>
+                  <div class="panel-body">
+
+               <h4>
+                    {{wiki_summary.title}}
+                </h4>
+                {% for s in wiki_summary.summary %}
+                        <h5>{{s}}</h5>
+                        {% endfor %}
+
+                </div>
+              </div>
+
+
+        </div>
+
+        </div>
+
+        {% else %}
+    <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+              <div class="panel panel-info">
+                <div class="panel-heading">TEAM</div>
+               <div class="panel-body">
+
+               <h3>{{response.name}}</h3>
+               <h3>League : {{response.league}}</h3>
+                   </br></br>
+                </div></div>
+              </div>
+
+          <div class="col-md-7">
+            <div class="panel panel-success">
+              <div class="panel-heading">DETAILS</div>
+               <div class="panel-body">
+                           <form method="post" action="" role="form">
+
+                                     <div class="form-group">
+                                      <label for="contactemail">Year</label>
+                                      <p>{{response.year}}</p>
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <label for="contactname">Games Played</label>
+                                      <p>{{response.games}}</p>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <label for="contactemail">Position</label>
+                                      <p>{{response.position}}</p>
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label for="contactemail">Points</label>
+                                      <p>{{response.points}}</p>
+                                    </div>
+
+
+                          </form>
+
+               </div>
+             </div>
+             </div>
+          </div>
+
+            <div class="row">
+
+              <div class="panel panel-primary">
+                <div class="panel-heading">NEWS</div>
+                {% for nresponse in response.newsresponses %}
+                  <div class="panel-body">
+
+               <h4>
+                <a href="{{nresponse.unescapedurl}}">{{nresponse.title|safe}}</a>
+                </h4>
+               <h5>{{nresponse.content|safe}}</h5>
+
+                </div>
+                  {%endfor %}
+              </div>
+
+
+        </div>
+        <div class="row">
+
+              <div class="panel panel-primary">
+                <div class="panel-heading">Wikipedia Summary</div>
+                  <div class="panel-body">
+
+               <h4>
+                    {{wiki_summary.title}}
+                </h4>
+                      {% for s in wiki_summary.summary %}
+                        <h5>{{s}}</h5>
+                        {% endfor %}
+                </div>
+              </div>
+
+
+        </div>
+
+    </div>
+    {%endif%}
+{%endif%}
+{% endblock  %}
+    </br></br></br></br></br></br></br></br>
+
+
+	</script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
+

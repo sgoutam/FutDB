@@ -1,0 +1,16 @@
+find_file
+java
+tempfile
+TaggerI
+StanfordTagger
+find_jar
+os
+PIPE
+_java_options
+_stanford_url
+StanfordPOSTagger
+compat
+config_java
+warnings
+find_jars_within_path
+StanfordNERTagger

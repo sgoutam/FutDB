@@ -1,0 +1,13 @@
+_WriteOp
+_index_list
+ReplaceOne
+validate_is_mapping
+DeleteOne
+validate_boolean
+DeleteMany
+_gen_index_name
+IndexModel
+_index_document
+InsertOne
+UpdateMany
+UpdateOne
